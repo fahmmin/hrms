@@ -12,6 +12,8 @@ It runs the open-source [Frappe HR](https://github.com/frappe/hrms) on [ERPNext]
 | **Demo data** | One command seeds a realistic company (37 people) across *every* Frappe HR module, so the whole system can be shown on day one. |
 | **One-command hosting** | Docker image + compose for a laptop demo, plus a production override with HTTPS and daily backups for a cloud VM. |
 
+**Demo video:** [`docs/media/moon-exchange-hrms-demo.mp4`](docs/media/moon-exchange-hrms-demo.mp4). This 6-minute captioned walkthrough was recorded from the running demo: work hours, the employee mobile app, attendance, leave, payroll, expenses, recruitment, onboarding, performance, training, org chart, the CRM pipeline and the About page. To re-record it, run `demo-video/make-video.sh`.
+
 ---
 
 ## Run the demo on your laptop
