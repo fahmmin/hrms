@@ -1,0 +1,202 @@
+{
+ "actions": [],
+ "allow_rename": 0,
+ "autoname": "field:company_name",
+ "creation": "2026-11-04 10:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "company_name",
+  "domain",
+  "industry",
+  "relationship",
+  "ideal_customer_profile",
+  "cb_1",
+  "logo",
+  "account_owner",
+  "employees",
+  "annual_volume",
+  "city",
+  "country",
+  "sb_social",
+  "linkedin",
+  "cb_2",
+  "x_handle",
+  "sb_about",
+  "description"
+ ],
+ "fields": [
+  {
+   "fieldname": "company_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Company Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "domain",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Website / Domain",
+   "options": "URL"
+  },
+  {
+   "fieldname": "industry",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Industry",
+   "options": "\nMarket Maker\nInstitutional Trader\nBanking Partner\nPayment Gateway\nCustody / Wallet\nKYC / Compliance Vendor\nLiquidity Provider\nCreator / Media\nCorporate Treasury\nTechnology Vendor\nOther"
+  },
+  {
+   "default": "Prospect",
+   "fieldname": "relationship",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Relationship",
+   "options": "Prospect\nCustomer\nPartner\nVendor\nInvestor\nChurned"
+  },
+  {
+   "fieldname": "ideal_customer_profile",
+   "fieldtype": "Check",
+   "label": "Ideal Customer Profile (ICP)"
+  },
+  {
+   "fieldname": "cb_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "logo",
+   "fieldtype": "Attach Image",
+   "hidden": 1,
+   "label": "Logo"
+  },
+  {
+   "fieldname": "account_owner",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Account Owner",
+   "options": "User"
+  },
+  {
+   "fieldname": "employees",
+   "fieldtype": "Int",
+   "label": "Employees"
+  },
+  {
+   "description": "Expected yearly trading / payment volume routed through Moon Exchange.",
+   "fieldname": "annual_volume",
+   "fieldtype": "Currency",
+   "label": "Expected Annual Volume (INR)",
+   "options": "INR"
+  },
+  {
+   "fieldname": "city",
+   "fieldtype": "Data",
+   "label": "City"
+  },
+  {
+   "fieldname": "country",
+   "fieldtype": "Link",
+   "label": "Country",
+   "options": "Country"
+  },
+  {
+   "fieldname": "sb_social",
+   "fieldtype": "Section Break",
+   "label": "Social"
+  },
+  {
+   "fieldname": "linkedin",
+   "fieldtype": "Data",
+   "label": "LinkedIn",
+   "options": "URL"
+  },
+  {
+   "fieldname": "cb_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "x_handle",
+   "fieldtype": "Data",
+   "label": "X (Twitter)"
+  },
+  {
+   "fieldname": "sb_about",
+   "fieldtype": "Section Break",
+   "label": "About"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Text Editor",
+   "label": "Description"
+  }
+ ],
+ "image_field": "logo",
+ "index_web_pages_for_search": 0,
+ "links": [],
+ "modified": "2026-11-04 10:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Moon CRM",
+ "name": "Pipeline Company",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Sales Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 0,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "CRM User",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 0,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "HR Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "search_fields": "industry,relationship",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

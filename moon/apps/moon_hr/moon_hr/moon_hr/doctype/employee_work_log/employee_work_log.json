@@ -1,0 +1,290 @@
+{
+ "actions": [],
+ "allow_rename": 0,
+ "autoname": "format:WL-{employee}-{date}",
+ "creation": "2026-11-04 10:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "employee",
+  "employee_name",
+  "department",
+  "employment_type",
+  "company",
+  "cb_1",
+  "date",
+  "day_type",
+  "status",
+  "work_hour_policy",
+  "source",
+  "sb_hours",
+  "expected_hours",
+  "worked_hours",
+  "break_hours",
+  "cb_2",
+  "overtime_hours",
+  "shortfall_hours",
+  "late_by_minutes",
+  "sb_sessions",
+  "first_in",
+  "cb_3",
+  "last_out",
+  "sb_sessions2",
+  "sessions",
+  "sb_manual",
+  "is_manual",
+  "notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "employee",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Employee",
+   "options": "Employee",
+   "reqd": 1,
+   "search_index": 1
+  },
+  {
+   "fetch_from": "employee.employee_name",
+   "fieldname": "employee_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Employee Name",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "employee.department",
+   "fieldname": "department",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Department",
+   "options": "Department",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "employee.employment_type",
+   "fieldname": "employment_type",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Employment Type",
+   "options": "Employment Type",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "employee.company",
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company",
+   "read_only": 1
+  },
+  {
+   "fieldname": "cb_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Date",
+   "reqd": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "day_type",
+   "fieldtype": "Select",
+   "label": "Day Type",
+   "options": "Working Day\nWeekly Off\nHoliday\nOn Leave\nHalf Day Leave",
+   "read_only": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Status",
+   "options": "\nOn Track\nOvertime\nShort\nHalf Day\nAbsent\nIn Progress\nOn Leave\nHoliday\nWeekly Off",
+   "read_only": 1
+  },
+  {
+   "fieldname": "work_hour_policy",
+   "fieldtype": "Link",
+   "label": "Work Hour Policy",
+   "options": "Work Hour Policy",
+   "read_only": 1
+  },
+  {
+   "fieldname": "source",
+   "fieldtype": "Select",
+   "label": "Source",
+   "options": "Check-in\nAttendance\nManual\nNone",
+   "read_only": 1
+  },
+  {
+   "fieldname": "sb_hours",
+   "fieldtype": "Section Break",
+   "label": "Hours"
+  },
+  {
+   "fieldname": "expected_hours",
+   "fieldtype": "Float",
+   "label": "Expected Hours",
+   "precision": "2",
+   "read_only": 1
+  },
+  {
+   "description": "Calculated from check-ins. Tick 'Manual Entry' to type hours yourself.",
+   "fieldname": "worked_hours",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Worked Hours",
+   "precision": "2"
+  },
+  {
+   "fieldname": "break_hours",
+   "fieldtype": "Float",
+   "label": "Break Hours",
+   "precision": "2",
+   "read_only": 1
+  },
+  {
+   "fieldname": "cb_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "overtime_hours",
+   "fieldtype": "Float",
+   "label": "Overtime Hours",
+   "precision": "2",
+   "read_only": 1
+  },
+  {
+   "fieldname": "shortfall_hours",
+   "fieldtype": "Float",
+   "label": "Shortfall Hours",
+   "precision": "2",
+   "read_only": 1
+  },
+  {
+   "fieldname": "late_by_minutes",
+   "fieldtype": "Int",
+   "label": "Late by (minutes)",
+   "read_only": 1
+  },
+  {
+   "fieldname": "sb_sessions",
+   "fieldtype": "Section Break",
+   "label": "Clock-in Sessions"
+  },
+  {
+   "fieldname": "first_in",
+   "fieldtype": "Datetime",
+   "label": "First In",
+   "read_only": 1
+  },
+  {
+   "fieldname": "cb_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "last_out",
+   "fieldtype": "Datetime",
+   "label": "Last Out",
+   "read_only": 1
+  },
+  {
+   "fieldname": "sb_sessions2",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "sessions",
+   "fieldtype": "Table",
+   "label": "Sessions",
+   "options": "Employee Work Log Session",
+   "read_only": 1
+  },
+  {
+   "fieldname": "sb_manual",
+   "fieldtype": "Section Break",
+   "label": "Manual Override"
+  },
+  {
+   "description": "When ticked, automatic recalculation leaves worked hours untouched.",
+   "fieldname": "is_manual",
+   "fieldtype": "Check",
+   "label": "Manual Entry"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Notes"
+  }
+ ],
+ "index_web_pages_for_search": 0,
+ "links": [],
+ "modified": "2026-11-04 10:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Moon HR",
+ "name": "Employee Work Log",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "HR Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 0,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "HR User",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 0,
+   "delete": 0,
+   "email": 0,
+   "export": 0,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Employee",
+   "share": 0,
+   "write": 0
+  }
+ ],
+ "search_fields": "employee_name,date",
+ "show_title_field_in_link": 0,
+ "sort_field": "date",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "employee_name",
+ "track_changes": 1
+}

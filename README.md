@@ -1,3 +1,7 @@
+> **Moon Exchange fork.** This repository also contains the Moon Exchange HRMS setup in [`moon/`](moon/README.md):
+> a custom `moon_hr` app (person-specific work hours, a Twenty-style CRM, the founders' About page and demo data),
+> a one-command Docker demo (`cd moon && ./start.sh`) and a [cloud hosting guide](moon/docs/HOSTING.md).
+
 <div align="center">
 	<a href="https://frappe.io/hr">
 		<img src=".github/frappe-hr-logo.png" height="80px" width="80px" alt="Frappe HR Logo">

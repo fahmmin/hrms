@@ -1,0 +1,364 @@
+{
+ "app": "moon_hr",
+ "charts": [],
+ "content": "[{\"id\": \"e0f90d7a71\", \"type\": \"header\", \"data\": {\"text\": \"<span class=\\\"h4\\\"><b>Work Hours & People</b></span>\", \"col\": 12}}, {\"id\": \"e2515768d7\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Work Hours Report\", \"col\": 3}}, {\"id\": \"8dc38542c1\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Work Logs\", \"col\": 3}}, {\"id\": \"d1fd986441\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Work Hour Policies\", \"col\": 3}}, {\"id\": \"4ad90bcdc3\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Check-ins\", \"col\": 3}}, {\"id\": \"866f8b81c0\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Employees\", \"col\": 3}}, {\"id\": \"4e6585ef02\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Attendance\", \"col\": 3}}, {\"id\": \"f7b011c3c0\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Leave Applications\", \"col\": 3}}, {\"id\": \"737edfaca3\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"About Page\", \"col\": 3}}, {\"id\": \"17bbab858e\", \"type\": \"spacer\", \"data\": {\"col\": 12}}, {\"id\": \"d3caf9d84f\", \"type\": \"header\", \"data\": {\"text\": \"<span class=\\\"h4\\\"><b>Pipeline CRM</b></span>\", \"col\": 12}}, {\"id\": \"22a6cdd0be\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Deal Pipeline (Kanban)\", \"col\": 3}}, {\"id\": \"e3e87a3ae5\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"CRM Companies\", \"col\": 3}}, {\"id\": \"810a766b92\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"CRM People\", \"col\": 3}}, {\"id\": \"4d47f7253c\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"CRM Tasks\", \"col\": 3}}, {\"id\": \"25a35244be\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Pipeline Summary\", \"col\": 3}}]",
+ "creation": "2026-11-04 10:00:00.000000",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "clock",
+ "idx": 0,
+ "is_hidden": 0,
+ "label": "Moon Exchange",
+ "links": [],
+ "modified": "2026-11-04 12:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Moon HR",
+ "name": "Moon Exchange",
+ "number_cards": [],
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [],
+ "sequence_id": 30.0,
+ "shortcuts": [
+  {
+   "color": "Blue",
+   "doc_view": "",
+   "label": "Work Hours Report",
+   "link_to": "Employee Work Hours",
+   "type": "Report"
+  },
+  {
+   "color": "Green",
+   "doc_view": "List",
+   "label": "Work Logs",
+   "link_to": "Employee Work Log",
+   "type": "DocType"
+  },
+  {
+   "color": "Orange",
+   "doc_view": "List",
+   "label": "Work Hour Policies",
+   "link_to": "Work Hour Policy",
+   "type": "DocType"
+  },
+  {
+   "color": "Purple",
+   "doc_view": "List",
+   "label": "Check-ins",
+   "link_to": "Employee Checkin",
+   "type": "DocType"
+  },
+  {
+   "color": "Cyan",
+   "doc_view": "List",
+   "label": "Employees",
+   "link_to": "Employee",
+   "stats_filter": "{\"status\":\"Active\"}",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Attendance",
+   "link_to": "Attendance",
+   "type": "DocType"
+  },
+  {
+   "color": "Yellow",
+   "doc_view": "List",
+   "label": "Leave Applications",
+   "link_to": "Leave Application",
+   "stats_filter": "{\"status\":\"Open\"}",
+   "type": "DocType"
+  },
+  {
+   "color": "Pink",
+   "label": "About Page",
+   "type": "URL",
+   "url": "/about"
+  },
+  {
+   "color": "Blue",
+   "doc_view": "Kanban",
+   "kanban_board": "Opportunities by Stage",
+   "label": "Deal Pipeline (Kanban)",
+   "link_to": "Pipeline Opportunity",
+   "type": "DocType"
+  },
+  {
+   "color": "Green",
+   "doc_view": "List",
+   "label": "CRM Companies",
+   "link_to": "Pipeline Company",
+   "type": "DocType"
+  },
+  {
+   "color": "Purple",
+   "doc_view": "List",
+   "label": "CRM People",
+   "link_to": "Pipeline Person",
+   "type": "DocType"
+  },
+  {
+   "color": "Orange",
+   "doc_view": "List",
+   "label": "CRM Tasks",
+   "link_to": "Pipeline Task",
+   "stats_filter": "{\"status\":[\"!=\",\"Done\"]}",
+   "type": "DocType"
+  },
+  {
+   "color": "Cyan",
+   "doc_view": "",
+   "label": "Pipeline Summary",
+   "link_to": "Pipeline Summary",
+   "type": "Report"
+  }
+ ],
+ "sidebar_items": [
+  {
+   "child": 0,
+   "collapsible": 1,
+   "icon": "house",
+   "indent": 0,
+   "keep_closed": 0,
+   "label": "Home",
+   "link_to": "Moon Exchange",
+   "link_type": "Workspace",
+   "show_arrow": 0,
+   "type": "Link"
+  },
+  {
+   "child": 0,
+   "collapsible": 1,
+   "icon": "clock",
+   "indent": 0,
+   "keep_closed": 0,
+   "label": "Work Hours Report",
+   "link_to": "Employee Work Hours",
+   "link_type": "Report",
+   "show_arrow": 0,
+   "type": "Link"
+  },
+  {
+   "child": 0,
+   "collapsible": 1,
+   "icon": "calendar-check",
+   "indent": 0,
+   "keep_closed": 0,
+   "label": "Employee Work Log",
+   "link_to": "Employee Work Log",
+   "link_type": "DocType",
+   "show_arrow": 0,
+   "type": "Link"
+  },
+  {
+   "child": 0,
+   "collapsible": 1,
+   "icon": "settings-2",
+   "indent": 0,
+   "keep_closed": 0,
+   "label": "Work Hour Policy",
+   "link_to": "Work Hour Policy",
+   "link_type": "DocType",
+   "show_arrow": 0,
+   "type": "Link"
+  },
+  {
+   "child": 0,
+   "collapsible": 1,
+   "icon": "fingerprint",
+   "indent": 1,
+   "keep_closed": 0,
+   "label": "Time & Attendance",
+   "link_type": "DocType",
+   "show_arrow": 0,
+   "type": "Section Break"
+  },
+  {
+   "child": 1,
+   "collapsible": 1,
+   "icon": "",
+   "indent": 0,
+   "keep_closed": 0,
+   "label": "Employee Checkin",
+   "link_to": "Employee Checkin",
+   "link_type": "DocType",
+   "show_arrow": 0,
+   "type": "Link"
+  },
+  {
+   "child": 1,
+   "collapsible": 1,
+   "icon": "",
+   "indent": 0,
+   "keep_closed": 0,
+   "label": "Attendance",
+   "link_to": "Attendance",
+   "link_type": "DocType",
+   "show_arrow": 0,
+   "type": "Link"
+  },
+  {
+   "child": 1,
+   "collapsible": 1,
+   "icon": "",
+   "indent": 0,
+   "keep_closed": 0,
+   "label": "Shift Assignment",
+   "link_to": "Shift Assignment",
+   "link_type": "DocType",
+   "show_arrow": 0,
+   "type": "Link"
+  },
+  {
+   "child": 1,
+   "collapsible": 1,
+   "icon": "",
+   "indent": 0,
+   "keep_closed": 0,
+   "label": "Attendance Request",
+   "link_to": "Attendance Request",
+   "link_type": "DocType",
+   "show_arrow": 0,
+   "type": "Link"
+  },
+  {
+   "child": 0,
+   "collapsible": 1,
+   "icon": "users",
+   "indent": 1,
+   "keep_closed": 0,
+   "label": "People",
+   "link_type": "DocType",
+   "show_arrow": 0,
+   "type": "Section Break"
+  },
+  {
+   "child": 1,
+   "collapsible": 1,
+   "icon": "",
+   "indent": 0,
+   "keep_closed": 0,
+   "label": "Employee",
+   "link_to": "Employee",
+   "link_type": "DocType",
+   "show_arrow": 0,
+   "type": "Link"
+  },
+  {
+   "child": 1,
+   "collapsible": 1,
+   "icon": "",
+   "indent": 0,
+   "keep_closed": 0,
+   "label": "Leave Application",
+   "link_to": "Leave Application",
+   "link_type": "DocType",
+   "show_arrow": 0,
+   "type": "Link"
+  },
+  {
+   "child": 1,
+   "collapsible": 1,
+   "icon": "",
+   "indent": 0,
+   "keep_closed": 0,
+   "label": "Salary Slip",
+   "link_to": "Salary Slip",
+   "link_type": "DocType",
+   "show_arrow": 0,
+   "type": "Link"
+  },
+  {
+   "child": 1,
+   "collapsible": 1,
+   "icon": "",
+   "indent": 0,
+   "keep_closed": 0,
+   "label": "Expense Claim",
+   "link_to": "Expense Claim",
+   "link_type": "DocType",
+   "show_arrow": 0,
+   "type": "Link"
+  },
+  {
+   "child": 0,
+   "collapsible": 1,
+   "icon": "kanban-square",
+   "indent": 1,
+   "keep_closed": 0,
+   "label": "Pipeline CRM",
+   "link_type": "DocType",
+   "show_arrow": 0,
+   "type": "Section Break"
+  },
+  {
+   "child": 1,
+   "collapsible": 1,
+   "icon": "",
+   "indent": 0,
+   "keep_closed": 0,
+   "label": "Opportunities",
+   "link_to": "Pipeline Opportunity",
+   "link_type": "DocType",
+   "show_arrow": 0,
+   "type": "Link"
+  },
+  {
+   "child": 1,
+   "collapsible": 1,
+   "icon": "",
+   "indent": 0,
+   "keep_closed": 0,
+   "label": "Companies",
+   "link_to": "Pipeline Company",
+   "link_type": "DocType",
+   "show_arrow": 0,
+   "type": "Link"
+  },
+  {
+   "child": 1,
+   "collapsible": 1,
+   "icon": "",
+   "indent": 0,
+   "keep_closed": 0,
+   "label": "People",
+   "link_to": "Pipeline Person",
+   "link_type": "DocType",
+   "show_arrow": 0,
+   "type": "Link"
+  },
+  {
+   "child": 1,
+   "collapsible": 1,
+   "icon": "",
+   "indent": 0,
+   "keep_closed": 0,
+   "label": "Tasks",
+   "link_to": "Pipeline Task",
+   "link_type": "DocType",
+   "show_arrow": 0,
+   "type": "Link"
+  },
+  {
+   "child": 0,
+   "collapsible": 1,
+   "icon": "info",
+   "indent": 0,
+   "keep_closed": 0,
+   "label": "About Page",
+   "link_to": null,
+   "link_type": "URL",
+   "show_arrow": 0,
+   "type": "Link",
+   "url": "/about"
+  }
+ ],
+ "title": "Moon Exchange"
+}

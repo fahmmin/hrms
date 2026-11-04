@@ -1,0 +1,159 @@
+{
+ "app": "moon_hr",
+ "charts": [],
+ "content": "[{\"id\": \"6ec64ae9a2\", \"type\": \"header\", \"data\": {\"text\": \"<span class=\\\"h4\\\"><b>Pipeline CRM - companies, people, deals</b></span>\", \"col\": 12}}, {\"id\": \"7b5bf17c22\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Opportunities\", \"col\": 3}}, {\"id\": \"5d377bd528\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Companies\", \"col\": 3}}, {\"id\": \"fee0e4bcee\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"People\", \"col\": 3}}, {\"id\": \"02806bde32\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Tasks\", \"col\": 3}}, {\"id\": \"93dcec77ed\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Notes\", \"col\": 3}}, {\"id\": \"92b5274a54\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Pipeline Report\", \"col\": 3}}]",
+ "creation": "2026-11-04 10:00:00.000000",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "kanban-square",
+ "idx": 0,
+ "is_hidden": 0,
+ "label": "Pipeline CRM",
+ "links": [],
+ "modified": "2026-11-04 10:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Moon CRM",
+ "name": "Pipeline CRM",
+ "number_cards": [],
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [],
+ "sequence_id": 30.0,
+ "shortcuts": [
+  {
+   "color": "Blue",
+   "doc_view": "Kanban",
+   "label": "Opportunities",
+   "link_to": "Pipeline Opportunity",
+   "type": "DocType"
+  },
+  {
+   "color": "Green",
+   "doc_view": "List",
+   "label": "Companies",
+   "link_to": "Pipeline Company",
+   "type": "DocType"
+  },
+  {
+   "color": "Purple",
+   "doc_view": "List",
+   "label": "People",
+   "link_to": "Pipeline Person",
+   "type": "DocType"
+  },
+  {
+   "color": "Orange",
+   "doc_view": "List",
+   "label": "Tasks",
+   "link_to": "Pipeline Task",
+   "stats_filter": "{\"status\":[\"!=\",\"Done\"]}",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Notes",
+   "link_to": "Pipeline Note",
+   "type": "DocType"
+  },
+  {
+   "color": "Cyan",
+   "doc_view": "",
+   "label": "Pipeline Report",
+   "link_to": "Pipeline Summary",
+   "type": "Report"
+  }
+ ],
+ "sidebar_items": [
+  {
+   "child": 0,
+   "collapsible": 1,
+   "icon": "house",
+   "indent": 0,
+   "keep_closed": 0,
+   "label": "Home",
+   "link_to": "Pipeline CRM",
+   "link_type": "Workspace",
+   "show_arrow": 0,
+   "type": "Link"
+  },
+  {
+   "child": 0,
+   "collapsible": 1,
+   "icon": "handshake",
+   "indent": 0,
+   "keep_closed": 0,
+   "label": "Opportunities",
+   "link_to": "Pipeline Opportunity",
+   "link_type": "DocType",
+   "show_arrow": 0,
+   "type": "Link"
+  },
+  {
+   "child": 0,
+   "collapsible": 1,
+   "icon": "building-2",
+   "indent": 0,
+   "keep_closed": 0,
+   "label": "Companies",
+   "link_to": "Pipeline Company",
+   "link_type": "DocType",
+   "show_arrow": 0,
+   "type": "Link"
+  },
+  {
+   "child": 0,
+   "collapsible": 1,
+   "icon": "contact",
+   "indent": 0,
+   "keep_closed": 0,
+   "label": "People",
+   "link_to": "Pipeline Person",
+   "link_type": "DocType",
+   "show_arrow": 0,
+   "type": "Link"
+  },
+  {
+   "child": 0,
+   "collapsible": 1,
+   "icon": "list-checks",
+   "indent": 0,
+   "keep_closed": 0,
+   "label": "Tasks",
+   "link_to": "Pipeline Task",
+   "link_type": "DocType",
+   "show_arrow": 0,
+   "type": "Link"
+  },
+  {
+   "child": 0,
+   "collapsible": 1,
+   "icon": "notebook-pen",
+   "indent": 0,
+   "keep_closed": 0,
+   "label": "Notes",
+   "link_to": "Pipeline Note",
+   "link_type": "DocType",
+   "show_arrow": 0,
+   "type": "Link"
+  },
+  {
+   "child": 0,
+   "collapsible": 1,
+   "icon": "chart-column",
+   "indent": 0,
+   "keep_closed": 0,
+   "label": "Pipeline Summary",
+   "link_to": "Pipeline Summary",
+   "link_type": "Report",
+   "show_arrow": 0,
+   "type": "Link"
+  }
+ ],
+ "title": "Pipeline CRM"
+}

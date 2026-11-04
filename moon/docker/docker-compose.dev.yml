@@ -1,0 +1,20 @@
+# Developer override: live-mount the moon_hr source so code changes need only a restart.
+#   docker compose -f docker/docker-compose.yml -f docker/docker-compose.dev.yml up -d
+x-dev-mount: &dev-mount
+  volumes:
+    - sites:/home/frappe/frappe-bench/sites
+    - logs:/home/frappe/frappe-bench/logs
+    - ../apps/moon_hr:/home/frappe/frappe-bench/apps/moon_hr
+
+services:
+  create-site:
+    volumes:
+      - sites:/home/frappe/frappe-bench/sites
+      - logs:/home/frappe/frappe-bench/logs
+      - ../apps/moon_hr:/home/frappe/frappe-bench/apps/moon_hr
+      - ./bootstrap.sh:/home/frappe/bootstrap.sh:ro
+  backend: *dev-mount
+  queue: *dev-mount
+  scheduler: *dev-mount
+  websocket: *dev-mount
+  frontend: *dev-mount

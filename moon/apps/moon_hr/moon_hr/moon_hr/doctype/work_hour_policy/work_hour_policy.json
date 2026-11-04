@@ -1,0 +1,255 @@
+{
+ "actions": [],
+ "allow_rename": 0,
+ "autoname": "field:policy_name",
+ "creation": "2026-11-04 10:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "policy_name",
+  "employment_type",
+  "is_default",
+  "cb_1",
+  "daily_hours",
+  "weekly_hours",
+  "monthly_hour_cap",
+  "sb_days",
+  "monday",
+  "tuesday",
+  "wednesday",
+  "thursday",
+  "cb_days",
+  "friday",
+  "saturday",
+  "sunday",
+  "sb_rules",
+  "start_time",
+  "grace_minutes",
+  "auto_break_minutes",
+  "cb_rules",
+  "half_day_threshold",
+  "overtime_after",
+  "count_off_day_as_overtime",
+  "sb_desc",
+  "description"
+ ],
+ "fields": [
+  {
+   "fieldname": "policy_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Policy Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "description": "Employees of this employment type follow this policy unless they have a personal override.",
+   "fieldname": "employment_type",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Employment Type",
+   "options": "Employment Type"
+  },
+  {
+   "description": "Used when no policy matches the employee's employment type.",
+   "fieldname": "is_default",
+   "fieldtype": "Check",
+   "label": "Default Policy"
+  },
+  {
+   "fieldname": "cb_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "8",
+   "fieldname": "daily_hours",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Expected Hours per Working Day",
+   "reqd": 1
+  },
+  {
+   "fieldname": "weekly_hours",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Expected Hours per Week",
+   "read_only": 1
+  },
+  {
+   "description": "Optional upper limit (e.g. interns / part-time). 0 = no cap.",
+   "fieldname": "monthly_hour_cap",
+   "fieldtype": "Float",
+   "label": "Monthly Hour Cap"
+  },
+  {
+   "fieldname": "sb_days",
+   "fieldtype": "Section Break",
+   "label": "Working Days"
+  },
+  {
+   "default": "1",
+   "fieldname": "monday",
+   "fieldtype": "Check",
+   "label": "Monday"
+  },
+  {
+   "default": "1",
+   "fieldname": "tuesday",
+   "fieldtype": "Check",
+   "label": "Tuesday"
+  },
+  {
+   "default": "1",
+   "fieldname": "wednesday",
+   "fieldtype": "Check",
+   "label": "Wednesday"
+  },
+  {
+   "default": "1",
+   "fieldname": "thursday",
+   "fieldtype": "Check",
+   "label": "Thursday"
+  },
+  {
+   "fieldname": "cb_days",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "1",
+   "fieldname": "friday",
+   "fieldtype": "Check",
+   "label": "Friday"
+  },
+  {
+   "default": "0",
+   "fieldname": "saturday",
+   "fieldtype": "Check",
+   "label": "Saturday"
+  },
+  {
+   "default": "0",
+   "fieldname": "sunday",
+   "fieldtype": "Check",
+   "label": "Sunday"
+  },
+  {
+   "fieldname": "sb_rules",
+   "fieldtype": "Section Break",
+   "label": "Timing Rules"
+  },
+  {
+   "default": "10:00:00",
+   "fieldname": "start_time",
+   "fieldtype": "Time",
+   "label": "Expected Start Time"
+  },
+  {
+   "default": "15",
+   "fieldname": "grace_minutes",
+   "fieldtype": "Int",
+   "label": "Late Grace (minutes)"
+  },
+  {
+   "default": "0",
+   "description": "Deducted when an employee has a single long session (> 5 h) without a break check-out.",
+   "fieldname": "auto_break_minutes",
+   "fieldtype": "Int",
+   "label": "Auto-deduct Break (minutes)"
+  },
+  {
+   "fieldname": "cb_rules",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "4",
+   "description": "Days with fewer worked hours than this are marked Half Day.",
+   "fieldname": "half_day_threshold",
+   "fieldtype": "Float",
+   "label": "Half Day below (hours)"
+  },
+  {
+   "description": "Defaults to the expected hours per day.",
+   "fieldname": "overtime_after",
+   "fieldtype": "Float",
+   "label": "Overtime after (hours/day)"
+  },
+  {
+   "default": "1",
+   "fieldname": "count_off_day_as_overtime",
+   "fieldtype": "Check",
+   "label": "Work on Weekly Off / Holiday counts as Overtime"
+  },
+  {
+   "fieldname": "sb_desc",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Small Text",
+   "label": "Description"
+  }
+ ],
+ "index_web_pages_for_search": 0,
+ "links": [],
+ "modified": "2026-11-04 10:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Moon HR",
+ "name": "Work Hour Policy",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "HR Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 0,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "HR User",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 0,
+   "delete": 0,
+   "email": 0,
+   "export": 0,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Employee",
+   "share": 0,
+   "write": 0
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

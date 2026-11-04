@@ -1,0 +1,192 @@
+{
+ "actions": [],
+ "allow_rename": 0,
+ "autoname": "naming_series:",
+ "creation": "2026-11-04 10:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "opportunity_name",
+  "company",
+  "point_of_contact",
+  "product",
+  "source",
+  "cb_1",
+  "stage",
+  "amount",
+  "probability",
+  "weighted_amount",
+  "close_date",
+  "opportunity_owner",
+  "sb_lost",
+  "lost_reason"
+ ],
+ "fields": [
+  {
+   "default": "CRM-OPP-.#####",
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Series",
+   "options": "CRM-OPP-.#####",
+   "set_only_once": 1
+  },
+  {
+   "fieldname": "opportunity_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Opportunity",
+   "reqd": 1
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Company",
+   "options": "Pipeline Company",
+   "reqd": 1
+  },
+  {
+   "fieldname": "point_of_contact",
+   "fieldtype": "Link",
+   "label": "Point of Contact",
+   "options": "Pipeline Person"
+  },
+  {
+   "fieldname": "product",
+   "fieldtype": "Select",
+   "in_standard_filter": 1,
+   "label": "Product",
+   "options": "\nSpot API\nFutures API\nOTC Desk\nInstitutional Custody\nToken Listing\nINR Payments\nCo-marketing"
+  },
+  {
+   "fieldname": "source",
+   "fieldtype": "Select",
+   "label": "Source",
+   "options": "\nInbound\nReferral\nEvent\nOutbound\nPartner"
+  },
+  {
+   "fieldname": "cb_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "New",
+   "fieldname": "stage",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Stage",
+   "options": "New\nScreening\nMeeting\nProposal\nCustomer\nLost",
+   "reqd": 1
+  },
+  {
+   "fieldname": "amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Amount (INR)",
+   "options": "INR"
+  },
+  {
+   "fieldname": "probability",
+   "fieldtype": "Percent",
+   "label": "Probability"
+  },
+  {
+   "fieldname": "weighted_amount",
+   "fieldtype": "Currency",
+   "label": "Weighted Amount",
+   "options": "INR",
+   "read_only": 1
+  },
+  {
+   "fieldname": "close_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Expected Close Date"
+  },
+  {
+   "fieldname": "opportunity_owner",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Owner",
+   "options": "User"
+  },
+  {
+   "depends_on": "eval:doc.stage=='Lost'",
+   "fieldname": "sb_lost",
+   "fieldtype": "Section Break",
+   "label": "Lost"
+  },
+  {
+   "fieldname": "lost_reason",
+   "fieldtype": "Small Text",
+   "label": "Lost Reason"
+  }
+ ],
+ "index_web_pages_for_search": 0,
+ "links": [],
+ "modified": "2026-11-04 10:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Moon CRM",
+ "name": "Pipeline Opportunity",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Sales Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 0,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "CRM User",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 0,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "HR Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "search_fields": "opportunity_name,company,stage",
+ "show_title_field_in_link": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "opportunity_name",
+ "track_changes": 1
+}

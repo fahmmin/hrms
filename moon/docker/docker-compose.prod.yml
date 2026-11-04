@@ -1,0 +1,54 @@
+# Production override for a cloud VM (adds HTTPS + daily backups).
+#
+#   DOMAIN=hr.moon.exchange ACME_EMAIL=ops@moon.exchange SEED_DEMO=0 \
+#   docker compose -f docker/docker-compose.yml -f docker/docker-compose.prod.yml up -d --build
+#
+# Point the DNS A record of $DOMAIN at the VM first; Caddy fetches a Let's Encrypt certificate
+# automatically. Only ports 80/443 are published; the app port stays private.
+services:
+  frontend:
+    ports: !reset []
+    environment:
+      FRAPPE_SITE_NAME_HEADER: ${SITE_NAME:-moon.localhost}
+      UPSTREAM_REAL_IP_ADDRESS: 0.0.0.0/0
+      UPSTREAM_REAL_IP_HEADER: X-Forwarded-For
+
+  caddy:
+    image: caddy:2.8.4
+    restart: unless-stopped
+    networks: [moon]
+    ports:
+      - "80:80"
+      - "443:443"
+    environment:
+      DOMAIN: ${DOMAIN:?set DOMAIN, e.g. hr.moon.exchange}
+      ACME_EMAIL: ${ACME_EMAIL:-}
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy-data:/data
+      - caddy-config:/config
+    depends_on: [frontend]
+
+  # Daily database + files backup into the `sites` volume (sites/<site>/private/backups).
+  # Copy them off the server too - see docs/HOSTING.md (rclone to S3 / Backblaze).
+  backup:
+    image: moon-hrms:${MOON_IMAGE_TAG:-local}
+    restart: unless-stopped
+    networks: [moon]
+    entrypoint: ["bash", "-c"]
+    command:
+      - >
+        while true; do
+          sleep 86400;
+          bench --site ${SITE_NAME:-moon.localhost} backup --with-files --compress &&
+          find sites/${SITE_NAME:-moon.localhost}/private/backups -type f -mtime +14 -delete;
+        done
+    volumes:
+      - sites:/home/frappe/frappe-bench/sites
+      - logs:/home/frappe/frappe-bench/logs
+    depends_on:
+      create-site: { condition: service_completed_successfully }
+
+volumes:
+  caddy-data:
+  caddy-config:
